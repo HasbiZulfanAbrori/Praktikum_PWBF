@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PUSKESMAS</title>
+        <title>POSYANDU</title>
     </head>
 
     <body>
-        <h3>Data User</h3>
-
-        <a href="/user/tambah"> + Tambah User Baru +</a>
+        <h3>Posyandu</h3>
 
         <br/>
         <br/>
 
         <table border="1">
             <tr>
-                <th>ID USER</th>
-                <th>ID History Posyandu</th>
-                <th>Username</th>
+                <th>ID POSYANDU</th>
+                <th>ID KELURAHAN</th>
+                <th>NAMA POSYANDU</th>
+                <th>ALAMAT POSYANDU</th>
                 <th>Aksi</th>
             </tr>
 
             @foreach($tbl_user as $p)
             <tr>
-                <td>{{ $p->id_user }}</td>
-                <td>{{ $p->id_history_posyandu }}</td>
-                <td>{{ $p->username }}</td>
+                <td>{{ $p->id_posyandu }}</td>
+                <td>{{ $p->id_kelurahan }}</td>
+                <td>{{ $p->nama_posyandu }}</td>
+                <td>{{ $p->alamat_posyandu }}</td>
                 <td>
-                    <a href="/user/edit/{{ $p->id }}">Edit</a>
+                    <a href="/posyandu/edit/{{ $p->id }}">Edit</a>
                     |
-                    <a href="/user/hapus/{{ $p->id }}">Hapus</a>
+                    <a href="/posyandu/hapus/{{ $p->id }}">Hapus</a>
                 </td>
             </tr>
             @endforeach
